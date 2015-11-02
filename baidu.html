@@ -1,0 +1,965 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/baidu.css">
+    <title>百度一下，你就知道</title>
+</head>
+
+<body>
+    <!--
+        @require js/baidu.js
+        @require js/jquery.js
+        @require css/baidu.css
+    -->
+    <div id="container">
+        <div id="header">
+            <div id="header-nav">
+                <div class="header-left">
+                    <a href="#" class="weather">惠州：<i></i> 28℃ <span>优 42</span></a> <span class="deadline">|</span>
+                    <a href="#" title="宝箱">宝箱</a>
+                    <a href="#" title="换肤">换肤</a>
+                    <a href="#" title="消息">消息</a>
+                </div>
+                <div class="header-right">
+                    <div class="h-r-a">
+                        <a href="http://news.baidu.com/" class="a" target="_self"><b>新闻</b></a>
+                        <a href="http://www.hao123.com/" class="a" target="_self"><b>hao123</b></a>
+                        <a href="http://map.baidu.com/" class="a" target="_self"><b>地图</b></a>
+                        <a href="http://v.baidu.com/" class="a" target="_self"><b>视频</b></a>
+                        <a href="http://tieba.baidu.com/" class="a" target="_self"><b>贴吧</b></a>
+                        <a href="#" class="login"><span class="icon-user"></span>GaryGuo</a>
+                        <a href="#" class="login-setting"><span class="icon-cog"></span>设置</a>
+                        <a href="#" class="more">更多产品</a>
+                    </div>
+                </div>
+            </div>
+            <div class="more-product">
+                <div class="mp-content">
+                    <p>更多产品</p>
+                    <ul>
+                        <li>
+                            <a href="#"><img src="image/nuomi_version1.png?__inline">糯米</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="image/zhidao.png?__inline">知道</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="image/music.png?__inline">音乐</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="image/image.png?__inline">图片</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="image/wenku.png?__inline">文库</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="image/bang.png?__inline">风云榜</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="image/tuiguang.png?__inline">百度推广</a>
+                        </li>
+                    </ul>
+                    <a href="#" class="all-pro">全部产品>></a>
+                </div>
+            </div>
+            <div class="user">
+                <i></i>
+                <div class="user-select">
+                    <ul>
+                        <li><a href="#">我的VIP</a></li>
+                        <li><a href="#">个人中心</a></li>
+                        <li><a href="#">账号设置</a></li>
+                        <li><a href="#">意见反馈</a></li>
+                        <li><a href="#">推出</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="user-setting">
+                <i></i>
+                <div class="user-s-select">
+                    <ul>
+                        <li><a href="#">搜索设置</a></li>
+                        <li><a href="#">高级搜索</a></li>
+                        <li><a href="#">关闭预测</a></li>
+                        <li><a href="#">搜索历史</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="weather-frame">
+                <i></i>
+                <div class="weather-message">
+                    <div class="weather-content">
+                        <div class="wc-top">
+                            <span id="month-day" title="9月10号">9月10号</span>
+                            <span title="农历 七月廿八" class="calendar">农历 七月廿八</span>
+                            <a href="#" class="near-day">未来7天天气</a>
+                            <a href="#" class="weather-set">设置</a>
+                        </div>
+                        <div class="wc-bottom">
+                            <ul>
+                                <li><a href="#" class="day-one"><span class="day">今天(周四)</span><img src="image/a1.jpg?__inline"><span>28℃</span><span>多云</span><span>微风</span></a></li>
+                                <li><a href="#" class="day-two"><span class="day">明天(周五)</span><img src="image/a1.jpg?__inline"><span>32 ~ 25℃</span><span>多云</span><span>微风</span></a></li>
+                                <li><a href="#" class="day-three"><span class="day">后天(周六)</span><img src="image/a1.jpg?__inline"><span>32 ~ 24℃</span><span>多云</span><span>微风</span></a></li>
+                                <li><a href="#" class="day-four"><span class="day">周日</span><img src="image/a1.jpg?__inline"><span>32 ~ 24℃</span><span>多云</span><span>微风</span></a></li>
+                                <li><a href="#" class="day-five"><span class="day">周一</span><img src="image/a1.jpg?__inline"><span>32 ~ 24℃</span><span>多云</span><span>微风</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <div class="content-logo">
+                <img src="image/270gif_716895d1fbe568ab4b3a95f99696f34a.gif?__inline" width="270" height="129" alt="百度logo">
+            </div>
+            <form method="post" action="#" id="form">
+                <div class="content-form">
+                    <input type="text" name="find-content" class="text" id="text" autofocus>
+                    <input type="button" value="百度一下" class="button">
+                </div>
+            </form>
+            <div class="content">
+                <div class="content-nav">
+                    <ul>
+                        <li>导航</li>
+                        <li>新闻</li>
+                        <li>音乐</li>
+                        <li>购物</li>
+                        <li>视频</li>
+                    </ul>
+                    <a href="#" class="nav-setting"><i class="change-normal"></i></a>
+                </div>
+                <div class="content-right">
+                    <div class="all-content">
+                        <div class="content-one content-frame">
+                            <div class="con-one-top">
+                                <ul>
+                                    <li class="my-nav click-title-change">我的导航</li>
+                                    <li class="recon-nav">推荐导航</li>
+                                </ul>
+                                <a href="#" class="add-nav">添加</a>
+                            </div>
+                            <div class="con-one-bot-all">
+                                <div class="con-one-bot con-one-bot-nav">
+                                    <a href="#"></a>
+                                </div>
+                                <div class="con-one-bot">
+                                    <div class="hot-web">热门网址</div>
+                                    <div class="web-img">
+                                        <a href="#"><img src="image/101.png?__inline"></a>
+                                        <a href="#" class="jd"><img src="image/102.png?__inline">
+                                            <p>返</p><span>最高返利80%</span></a>
+                                        <a href="#" class="nuomi"><img src="image/142.png?__inline">
+                                            <p>返</p><span>最高返利3.54%</span></a>
+                                        <a href="#" class="yihao"><img src="image/125.png?__inline">
+                                            <p>返</p><span>最高返利81%</span></a>
+                                        <a href="#" class="ctrip"><img src="image/116.png?__inline">
+                                            <p>返</p><span>最高返利3%</span></a>
+                                        <a href="#"><img src="image/108.png?__inline"></a>
+                                        <a href="#" class="suning"><img src="image/145.png?__inline">
+                                            <p>返</p><span>最高返利2.8%</span></a>
+                                        <a href="#"><img src="image/147.png?__inline"></a>
+                                        <a href="#"><img src="image/149.png?__inline"></a>
+                                        <a href="#"><img src="image/129.png?__inline"></a>
+                                        <a href="#"><img src="image/121.png?__inline"></a>
+                                        <a href="#"><img src="image/144.png?__inline"></a>
+                                        <a href="#"><img src="image/132.png?__inline"></a>
+                                        <a href="#"><img src="image/143.png?__inline"></a>
+                                        <a href="#" class="zhenpin"><img src="image/120.png?__inline">
+                                            <p>返</p><span>最高返利3.36%</span></a>
+                                        <a href="#"><img src="image/109.png?__inline"></a>
+                                        <a href="#"><img src="image/7.png?__inline"></a>
+                                        <a href="#"><img src="image/146.png?__inline"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-two content-frame">
+                            <div class="content-two-left">
+                                <div class="img-banner">
+                                    <div class="banner-one banner-pic">
+                                        <div class="title-bg"></div>
+                                        <a href="#"><img src="image/c8177f3e6709c93d3b8556a9993df8dcd100547c.jpg?__inline" width="425" height="260"><span>女大学生扶老人被讹 目击者公开现场照片</span></a>
+                                    </div>
+                                    <div class="banner-two banner-pic">
+                                        <div class="title-bg"></div>
+                                        <a href="#"><img src="image/0dd7912397dda14442782eecb4b7d0a20cf4867f.jpg?__inline" width="425" height="260"><span>大广高速新县段发生重大交通事故 已致12人死亡</span></a>
+                                    </div>
+                                    <div class="banner-three banner-pic">
+                                        <div class="title-bg"></div>
+                                        <a href="#"><img src="image/6609c93d70cf3bc7d1f094b2d700baa1cc112aff.jpg?__inline" width="425" height="260"><span>美电影院枪击案致12人死 现场照片首曝光</span></a>
+                                    </div>
+                                    <div class="banner-four banner-pic">
+                                        <div class="title-bg"></div>
+                                        <a href="#"><img src="image/503d269759ee3d6dea6bdd9545166d224f4ade3b.jpg?__inline" width="425" height="260"><span>巴菲特慈善午餐 朱晔:234万美金花得值</span></a>
+                                    </div>
+                                    <div class="banner-five banner-pic">
+                                        <div class="title-bg"></div>
+                                        <a href="#"><img src="image/a6efce1b9d16fdfab3199eb0b28f8c5494ee7b72.jpg?__inline" width="425" height="260"><span>深圳珠宝展模特展示"黄金婚纱"</span></a>
+                                    </div>
+                                    <div class="banner-six banner-pic">
+                                        <div class="title-bg"></div>
+                                        <a href="#"><img src="image/4d086e061d950a7badce179a0cd162d9f3d3c9f1.jpg?__inline" width="425" height="260"><span>美国驯熊世家养13头熊当宠物</span></a>
+                                    </div>
+                                    <div class="banner-seven banner-pic">
+                                        <div class="title-bg"></div>
+                                        <a href="#"><img src="image/e824b899a9014c08c20e71fb0c7b02087bf4f4b3.jpg?__inline" width="425" height="260"><span>河北一高中教官持钢管打伤约20名学生</span></a>
+                                    </div>
+                                </div>
+                                <div class="banner-img-small">
+                                    <div class="small-img-nav">
+                                        <a href="#" class="small-img-sty-change" id="small-nav-one"><img src="image/c8177f3e6709c93d3b8556a9993df8dcd100547c.jpg?__inline" width="70" height="42"></a>
+                                        <a href="#" class="small-img-sty"><img src="image/0dd7912397dda14442782eecb4b7d0a20cf4867f.jpg?__inline" width="70" height="42"></a>
+                                        <a href="#" class="small-img-sty"><img src="image/6609c93d70cf3bc7d1f094b2d700baa1cc112aff.jpg?__inline" width="70" height="42"></a>
+                                        <a href="#" class="small-img-sty"><img src="image/503d269759ee3d6dea6bdd9545166d224f4ade3b.jpg?__inline" width="70" height="42"></a>
+                                        <a href="#" class="small-img-sty"><img src="image/a6efce1b9d16fdfab3199eb0b28f8c5494ee7b72.jpg?__inline" width="70" height="42"></a>
+                                        <a href="#" class="small-img-sty"><img src="image/4d086e061d950a7badce179a0cd162d9f3d3c9f1.jpg?__inline" width="70" height="42"></a>
+                                        <a href="#" class="small-img-sty"><img src="image/e824b899a9014c08c20e71fb0c7b02087bf4f4b3.jpg?__inline" width="70" height="42"></a>
+                                    </div>
+                                </div>
+                                <div class="left-arrow"></div>
+                                <div class="right-arrow"></div>
+                            </div>
+                            <div class="news-frame">
+                                <div class="news-message">
+                                    <div class="news-mess-top">
+                                        <a href="#" class="news-search"><i></i>搜索风云榜</a>
+                                        <a href="#" class="news-change"><i></i>换一换</a>
+                                    </div>
+                                    <div class="news-mess-bottom">
+                                        <ul>
+                                            <li><i></i><a href="#">融金所被查</a></li>
+                                            <li><i></i><a href="#">中金交易系统瘫痪</a></li>
+                                            <li><i></i><a href="#">习近平教师节回信</a></li>
+                                            <li><i></i><a href="#">is抓获中国人质</a></li>
+                                            <li><i></i><a href="#">王健林拆地标建筑</a></li>
+                                            <li><i></i><a href="#">首批特赦犯出狱</a></li>
+                                            <li><i></i><a href="#">消防员获赔230万</a></li>
+                                            <li><i></i><a href="#">苹果发布会回顾</a></li>
+                                        </ul>
+                                        <ul>
+                                            <li><i></i><a href="#">福州新区范围获批</a></li>
+                                            <li><i></i><a href="#">长腿干爹病逝</a></li>
+                                            <li><i></i><a href="#">台湾海峡军演</a></li>
+                                            <li><i></i><a href="#">非诚勿扰灯王</a></li>
+                                            <li><i></i><a href="#">河南最牛车牌号</a></li>
+                                            <li><i></i><a href="#">大熊猫偷吃蜂蜜</a></li>
+                                            <li><i></i><a href="#">犯人统治监狱</a></li>
+                                            <li><i></i><a href="#">女模刷新长腿记录</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-three content-frame">
+                            <div class="con-thr-left">
+                                <div class="music-img">
+                                    <a href="" class="music-start"></a>
+                                    <a href="" class="music-pause"></a>
+                                </div>
+                            </div>
+                            <div class="con-thr-middle">
+                                <div class="music-name">
+                                    <a href="">光辉岁月</a>
+                                    <a href=""><span>beyond</span></a>
+                                </div>
+                                <div class="music-time">
+                                    <div class="process-bar">
+                                        <div class="processing"></div>
+                                    </div>
+                                    <span class="time-num">04:58</span>
+                                    <div class="voice">
+                                        <a href="" class="volume-open"></a>
+                                        <a href="" class="volume-close"></a>
+                                    </div>
+                                    <div class="music-download">
+                                        <a href="">下载</a>
+                                    </div>
+                                </div>
+                                <div class="music-button">
+                                    <a href="" class="music-state" title="开始"></a>
+                                    <a href="" class="music-collection" title="收藏"></a>
+                                    <a href="" class="neven-start" title="不再播放"></a>
+                                    <a href="" class="music-change" title="切歌"></a>
+                                </div>
+                                <div class="music-lyric">
+                                    <div class="lyc-top-border"></div>
+                                    <a href="" class="baidu-music"></a>
+                                    <div class="lyric-content">
+                                        <ul>
+                                            <li>光辉岁月</li>
+                                            <li>演唱：Beyond</li>
+                                            <br/>
+                                            <li>钟声响起归家的讯号</li>
+                                            <li>在他生命里</li>
+                                            <li>彷佛带点唏嘘</li>
+                                            <li>黑色肌肤给他的意义</li>
+                                            <li>是一生奉献 肤色斗争中</li>
+                                            <li>年月把拥有变做失去</li>
+                                            <li>疲倦的双眼带著期望</li>
+                                            <li>今天只有残留的躯壳</li>
+                                            <li>迎接光辉岁月</li>
+                                            <li>风雨中抱紧自由</li>
+                                            <li>一生经过彷徨的挣扎</li>
+                                            <li>自信可改变未来</li>
+                                            <li>问谁又能做到</li>
+                                            <br/>
+                                            <li>可否不分肤色的界线</li>
+                                            <li>愿这土地里</li>
+                                            <li>不分你我高低</li>
+                                            <li>缤纷色彩显出的美丽</li>
+                                            <li>是因它没有</li>
+                                            <li>分开每种色彩</li>
+                                            <li>年月把拥有变做失去</li>
+                                            <li>疲倦的双眼带著期望</li>
+                                            <li>今天只有残留的躯壳</li>
+                                            <li>迎接光辉岁月</li>
+                                            <li>风雨中抱紧自由</li>
+                                            <li>一生经过彷徨的挣扎</li>
+                                            <li>自信可改变未来</li>
+                                            <li>问谁又能做到</li>
+                                            <br/>
+                                            <li>今天只有残留的躯壳</li>
+                                            <li>迎接光辉岁月</li>
+                                            <li>风雨中抱紧自由</li>
+                                            <li>一生经过彷徨的挣扎</li>
+                                            <li>自信可改变未来</li>
+                                            <li>问谁又能做到</li>
+                                            <br/>
+                                            <li>今天只有残留的躯壳</li>
+                                            <li>迎接光辉岁月</li>
+                                            <li>风雨中抱紧自由</li>
+                                            <li>一生经过彷徨的挣扎</li>
+                                            <li>自信可改变未来</li>
+                                            <li>问谁又能做到</li>
+                                            <br/>
+                                            <li>今天只有残留的躯壳</li>
+                                            <li>迎接光辉岁月</li>
+                                            <li>风雨中抱紧自由</li>
+                                            <li>一生经过彷徨的挣扎</li>
+                                            <li>自信可改变未来</li>
+                                        </ul>
+                                    </div>
+                                    <div class="music-scroll">
+                                        <div class="mouse-scroll"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="con-thr-right">
+                                <div class="hot-channel">热门频道</div>
+                                <div class="change-panel">
+                                    <a href="" class="personal"><span>私人频道</span></a>
+                                    <a href="" class="red-star"><span>红星频道</span></a>
+                                    <a href="" class=""><span>随便听听</span></a>
+                                    <a href="" class=""><span>欧美</span></a>
+                                    <a href="" class="click-panel"><span>经典老歌</span></a>
+                                    <a href="" class=""><span>DJ舞曲</span></a>
+                                    <a href="" class=""><span>热歌</span></a>
+                                    <a href="" class=""><span>网络红歌</span></a>
+                                    <a href="" class=""><span>成名曲</span></a>
+                                    <a href="" class=""><span>火爆新歌</span></a>
+                                    <a href="" class=""><span>流行</span></a>
+                                    <a href="" class=""><span>快乐旋律</span></a>
+                                    <a href="" class=""><span>KTV金曲</span></a>
+                                    <a href="" class=""><span>伤感调频</span></a>
+                                    <a href="" class=""><span>80后</span></a>
+                                    <a href="" class=""><span>90后</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-four content-frame">
+                            <div class="con-four-top">
+                                <ul>
+                                    <li>今日优选</li>
+                                    <li>美食</li>
+                                    <li>电影</li>
+                                    <li>娱乐</li>
+                                    <li>猜你喜欢</li>
+                                </ul>
+                                <div class="account">
+                                    <a href="" class="my-account">我的账户<i></i></a>
+                                    <a href="" class="look-more">查看更多</a>
+                                    <div class="acount-list">
+                                        <a href="">我的订单</a>
+                                        <a href="">我的积分</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="four-bottom-all">
+                                <div class="con-four-bottom">
+                                    <div class="four-left">
+                                        <div class="gbuy-item">
+                                            <div class="gbuy-item-img">
+                                                <a href=""><img src="image/48540923dd54564ee774f97cb5de9c82d1584f65.jpg?__inline"></a>
+                                            </div>
+                                            <div class="gbuy-item-word">
+                                                <div class="gbuy-message">
+                                                    <a href="">乐事超级手机乐1</a>
+                                                    <p>最高返17元</p>
+                                                </div>
+                                                <div class="gbuy-pride">
+                                                    <span>¥1499</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="gbuy-item">
+                                            <div class="gbuy-item-img">
+                                                <a href=""><img src="image/d6ca7bcb0a46f21fa84b4316f0246b600c33ae73.jpg?__inline"></a>
+                                            </div>
+                                            <div class="gbuy-item-word">
+                                                <div class="gbuy-message">
+                                                    <a href="">乐事超级手机乐1</a>
+                                                    <p>最高返17元</p>
+                                                </div>
+                                                <div class="gbuy-pride">
+                                                    <span>¥1499</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="gbuy-item">
+                                            <div class="gbuy-item-img">
+                                                <a href=""><img src="image/e824b899a9014c089ff53ae00c7b02087af4f4ad.jpg?__inline"></a>
+                                            </div>
+                                            <div class="gbuy-item-word">
+                                                <div class="gbuy-message">
+                                                    <a href="">乐事超级手机乐1</a>
+                                                    <p>最高返17元</p>
+                                                </div>
+                                                <div class="gbuy-pride">
+                                                    <span>¥1499</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="gbuy-item">
+                                            <div class="gbuy-item-img">
+                                                <a href=""><img src="image/b17eca8065380cd7aa61bfa8a744ad3459828173.jpg?__inline"></a>
+                                            </div>
+                                            <div class="gbuy-item-word">
+                                                <div class="gbuy-message">
+                                                    <a href="">乐事超级手机乐1</a>
+                                                    <p>最高返17元</p>
+                                                </div>
+                                                <div class="gbuy-pride">
+                                                    <span>¥1499</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="gbuy-item">
+                                            <div class="gbuy-item-img">
+                                                <a href=""><img src="image/4ec2d5628535e5ddbd53b89a70c6a7efce1b6273.jpg?__inline"></a>
+                                            </div>
+                                            <div class="gbuy-item-word">
+                                                <div class="gbuy-message">
+                                                    <a href="">乐事超级手机乐1</a>
+                                                    <p>最高返17元</p>
+                                                </div>
+                                                <div class="gbuy-pride">
+                                                    <span>¥1499</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="gbuy-item">
+                                            <div class="gbuy-item-img">
+                                                <a href=""><img src="image/6a600c338744ebf804b8767adff9d72a6159a7ad.jpg?__inline"></a>
+                                            </div>
+                                            <div class="gbuy-item-word">
+                                                <div class="gbuy-message">
+                                                    <a href="">乐事超级手机乐1</a>
+                                                    <p>最高返17元</p>
+                                                </div>
+                                                <div class="gbuy-pride">
+                                                    <span>¥1499</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="four-right">
+                                        <div class="gbuy-activity">
+                                            <a href="" class="activity-title"><i></i>百度VIP嗨享乐迷节</a>
+                                            <a href="" class="activity-offer">电视手机免费送，全场返利</a>
+                                        </div>
+                                        <div class="gbuy-section">
+                                            <p>返利商城</p>
+                                            <a href="">百度糯米</a>
+                                            <a href="">京东商城</a>
+                                            <a href="">当当网</a>
+                                            <a href="">1号店</a>
+                                            <a href="">苏宁易购</a>
+                                            <a href="" class="gbuy-more">更多</a>
+                                        </div>
+                                        <div class="gbuy-section">
+                                            <p>免费优惠券</p>
+                                            <a href="">跨境淘</a>
+                                            <a href="">爱慕内衣</a>
+                                            <a href="">河狸家</a>
+                                            <a href="">功夫熊</a>
+                                            <a href="">e袋洗</a>
+                                            <a href="" class="gbuy-more">更多</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="con-four-bottom">
+                                    <div class="four-left">
+                                        <div class="gbuy-item">
+                                            <div class="gbuy-item-img">
+                                                <a href=""><img src="image/6159252dd42a2834b808c2635db5c9ea15cebf28.jpg?__inline"></a>
+                                            </div>
+                                            <div class="gbuy-item-word">
+                                                <div class="gbuy-message">
+                                                    <a href="">乐事超级手机乐1</a>
+                                                    <p>最高返17元</p>
+                                                </div>
+                                                <div class="gbuy-pride">
+                                                    <span>¥1499</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="gbuy-item">
+                                            <div class="gbuy-item-img">
+                                                <a href=""><img src="image/6159252dd42a2834b808c2635db5c9ea15cebf28.jpg?__inline"></a>
+                                            </div>
+                                            <div class="gbuy-item-word">
+                                                <div class="gbuy-message">
+                                                    <a href="">乐事超级手机乐1</a>
+                                                    <p>最高返17元</p>
+                                                </div>
+                                                <div class="gbuy-pride">
+                                                    <span>¥1499</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="gbuy-item">
+                                            <div class="gbuy-item-img">
+                                                <a href=""><img src="image/6159252dd42a2834b808c2635db5c9ea15cebf28.jpg?__inline"></a>
+                                            </div>
+                                            <div class="gbuy-item-word">
+                                                <div class="gbuy-message">
+                                                    <a href="">乐事超级手机乐1</a>
+                                                    <p>最高返17元</p>
+                                                </div>
+                                                <div class="gbuy-pride">
+                                                    <span>¥1499</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="gbuy-item">
+                                            <div class="gbuy-item-img">
+                                                <a href=""><img src="image/6159252dd42a2834b808c2635db5c9ea15cebf28.jpg?__inline"></a>
+                                            </div>
+                                            <div class="gbuy-item-word">
+                                                <div class="gbuy-message">
+                                                    <a href="">乐事超级手机乐1</a>
+                                                    <p>最高返17元</p>
+                                                </div>
+                                                <div class="gbuy-pride">
+                                                    <span>¥1499</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="gbuy-item">
+                                            <div class="gbuy-item-img">
+                                                <a href=""><img src="image/6159252dd42a2834b808c2635db5c9ea15cebf28.jpg?__inline"></a>
+                                            </div>
+                                            <div class="gbuy-item-word">
+                                                <div class="gbuy-message">
+                                                    <a href="">乐事超级手机乐1</a>
+                                                    <p>最高返17元</p>
+                                                </div>
+                                                <div class="gbuy-pride">
+                                                    <span>¥1499</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="gbuy-item">
+                                            <div class="gbuy-item-img">
+                                                <a href=""><img src="image/6159252dd42a2834b808c2635db5c9ea15cebf28.jpg?__inline"></a>
+                                            </div>
+                                            <div class="gbuy-item-word">
+                                                <div class="gbuy-message">
+                                                    <a href="">乐事超级手机乐1</a>
+                                                    <p>最高返17元</p>
+                                                </div>
+                                                <div class="gbuy-pride">
+                                                    <span>¥1499</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="four-right">
+                                        <div class="gbuy-activity">
+                                            <a href="" class="activity-title"><i></i>百度VIP嗨享乐迷节</a>
+                                            <a href="" class="activity-offer">电视手机免费送，全场返利</a>
+                                        </div>
+                                        <div class="gbuy-section">
+                                            <p>热门分类</p>
+                                            <a href="">百度糯米</a>
+                                            <a href="">京东商城</a>
+                                            <a href="">当当网</a>
+                                            <a href="">1号店</a>
+                                            <a href="">苏宁易购</a>
+                                            <a href="" class="gbuy-more">更多</a>
+                                        </div>
+                                        <div class="gbuy-section">
+                                            <p>热门商圈</p>
+                                            <a href="">跨境淘</a>
+                                            <a href="">爱慕内衣</a>
+                                            <a href="">河狸家</a>
+                                            <a href="">功夫熊</a>
+                                            <a href="">e袋洗</a>
+                                            <a href="" class="gbuy-more">更多</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="con-four-bottom">
+                                    <div class="four-left">
+                                        <div class="gbuy-item">
+                                            <div class="gbuy-item-img">
+                                                <a href=""><img src="image/1110419-jfz75k8i97-11988587497154008.jpg?__inline"></a>
+                                            </div>
+                                            <div class="gbuy-item-word">
+                                                <div class="gbuy-message">
+                                                    <a href="">乐事超级手机乐1</a>
+                                                    <p>最高返17元</p>
+                                                </div>
+                                                <div class="gbuy-pride">
+                                                    <span>¥1499</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="gbuy-item">
+                                            <div class="gbuy-item-img">
+                                                <a href=""><img src="image/1110419-jfz75k8i97-11988587497154008.jpg?__inline"></a>
+                                            </div>
+                                            <div class="gbuy-item-word">
+                                                <div class="gbuy-message">
+                                                    <a href="">乐事超级手机乐1</a>
+                                                    <p>最高返17元</p>
+                                                </div>
+                                                <div class="gbuy-pride">
+                                                    <span>¥1499</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="gbuy-item">
+                                            <div class="gbuy-item-img">
+                                                <a href=""><img src="image/1110419-jfz75k8i97-11988587497154008.jpg?__inline"></a>
+                                            </div>
+                                            <div class="gbuy-item-word">
+                                                <div class="gbuy-message">
+                                                    <a href="">乐事超级手机乐1</a>
+                                                    <p>最高返17元</p>
+                                                </div>
+                                                <div class="gbuy-pride">
+                                                    <span>¥1499</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="gbuy-item">
+                                            <div class="gbuy-item-img">
+                                                <a href=""><img src="image/1110419-jfz75k8i97-11988587497154008.jpg?__inline"></a>
+                                            </div>
+                                            <div class="gbuy-item-word">
+                                                <div class="gbuy-message">
+                                                    <a href="">乐事超级手机乐1</a>
+                                                    <p>最高返17元</p>
+                                                </div>
+                                                <div class="gbuy-pride">
+                                                    <span>¥1499</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="gbuy-item">
+                                            <div class="gbuy-item-img">
+                                                <a href=""><img src="image/1110419-jfz75k8i97-11988587497154008.jpg?__inline"></a>
+                                            </div>
+                                            <div class="gbuy-item-word">
+                                                <div class="gbuy-message">
+                                                    <a href="">乐事超级手机乐1</a>
+                                                    <p>最高返17元</p>
+                                                </div>
+                                                <div class="gbuy-pride">
+                                                    <span>¥1499</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="gbuy-item">
+                                            <div class="gbuy-item-img">
+                                                <a href=""><img src="image/1110419-jfz75k8i97-11988587497154008.jpg?__inline"></a>
+                                            </div>
+                                            <div class="gbuy-item-word">
+                                                <div class="gbuy-message">
+                                                    <a href="">乐事超级手机乐1</a>
+                                                    <p>最高返17元</p>
+                                                </div>
+                                                <div class="gbuy-pride">
+                                                    <span>¥1499</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="four-right">
+                                        <div class="gbuy-activity">
+                                            <a href="" class="activity-title"><i></i>百度VIP嗨享乐迷节</a>
+                                            <a href="" class="activity-offer">电视手机免费送，全场返利</a>
+                                        </div>
+                                        <div class="gbuy-section">
+                                            <p>找影院</p>
+                                            <a href="">百度糯米</a>
+                                            <a href="">京东商城</a>
+                                            <a href="">当当网</a>
+                                            <a href="">1号店</a>
+                                            <a href="">苏宁易购</a>
+                                            <a href="" class="gbuy-more">更多</a>
+                                        </div>
+                                        <div class="gbuy-section">
+                                            <p>找团购</p>
+                                            <a href="">跨境淘</a>
+                                            <a href="">爱慕内衣</a>
+                                            <a href="">河狸家</a>
+                                            <a href="">功夫熊</a>
+                                            <a href="">e袋洗</a>
+                                            <a href="" class="gbuy-more">更多</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="con-four-bottom">
+                                    <div class="four-left">
+                                        <div class="gbuy-item">
+                                            <div class="gbuy-item-img">
+                                                <a href=""><img src="image/55e736d12f2eb938b18a1bced0628535e5dd6f22.jpg?__inline"></a>
+                                            </div>
+                                            <div class="gbuy-item-word">
+                                                <div class="gbuy-message">
+                                                    <a href="">乐事超级手机乐1</a>
+                                                    <p>最高返17元</p>
+                                                </div>
+                                                <div class="gbuy-pride">
+                                                    <span>¥1499</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="gbuy-item">
+                                            <div class="gbuy-item-img">
+                                                <a href=""><img src="image/55e736d12f2eb938b18a1bced0628535e5dd6f22.jpg?__inline"></a>
+                                            </div>
+                                            <div class="gbuy-item-word">
+                                                <div class="gbuy-message">
+                                                    <a href="">乐事超级手机乐1</a>
+                                                    <p>最高返17元</p>
+                                                </div>
+                                                <div class="gbuy-pride">
+                                                    <span>¥1499</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="gbuy-item">
+                                            <div class="gbuy-item-img">
+                                                <a href=""><img src="image/55e736d12f2eb938b18a1bced0628535e5dd6f22.jpg?__inline"></a>
+                                            </div>
+                                            <div class="gbuy-item-word">
+                                                <div class="gbuy-message">
+                                                    <a href="">乐事超级手机乐1</a>
+                                                    <p>最高返17元</p>
+                                                </div>
+                                                <div class="gbuy-pride">
+                                                    <span>¥1499</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="gbuy-item">
+                                            <div class="gbuy-item-img">
+                                                <a href=""><img src="image/55e736d12f2eb938b18a1bced0628535e5dd6f22.jpg?__inline"></a>
+                                            </div>
+                                            <div class="gbuy-item-word">
+                                                <div class="gbuy-message">
+                                                    <a href="">乐事超级手机乐1</a>
+                                                    <p>最高返17元</p>
+                                                </div>
+                                                <div class="gbuy-pride">
+                                                    <span>¥1499</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="gbuy-item">
+                                            <div class="gbuy-item-img">
+                                                <a href=""><img src="image/55e736d12f2eb938b18a1bced0628535e5dd6f22.jpg?__inline"></a>
+                                            </div>
+                                            <div class="gbuy-item-word">
+                                                <div class="gbuy-message">
+                                                    <a href="">乐事超级手机乐1</a>
+                                                    <p>最高返17元</p>
+                                                </div>
+                                                <div class="gbuy-pride">
+                                                    <span>¥1499</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="gbuy-item">
+                                            <div class="gbuy-item-img">
+                                                <a href=""><img src="image/55e736d12f2eb938b18a1bced0628535e5dd6f22.jpg?__inline"></a>
+                                            </div>
+                                            <div class="gbuy-item-word">
+                                                <div class="gbuy-message">
+                                                    <a href="">乐事超级手机乐1</a>
+                                                    <p>最高返17元</p>
+                                                </div>
+                                                <div class="gbuy-pride">
+                                                    <span>¥1499</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="four-right">
+                                        <div class="gbuy-activity">
+                                            <a href="" class="activity-title"><i></i>百度VIP嗨享乐迷节</a>
+                                            <a href="" class="activity-offer">电视手机免费送，全场返利</a>
+                                        </div>
+                                        <div class="gbuy-section">
+                                            <p>返利商城</p>
+                                            <a href="">百度糯米</a>
+                                            <a href="">京东商城</a>
+                                            <a href="">当当网</a>
+                                            <a href="">1号店</a>
+                                            <a href="">苏宁易购</a>
+                                            <a href="" class="gbuy-more">更多</a>
+                                        </div>
+                                        <div class="gbuy-section">
+                                            <p>免费优惠券</p>
+                                            <a href="">跨境淘</a>
+                                            <a href="">爱慕内衣</a>
+                                            <a href="">河狸家</a>
+                                            <a href="">功夫熊</a>
+                                            <a href="">e袋洗</a>
+                                            <a href="" class="gbuy-more">更多</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="con-four-bottom">
+                                    <div class="four-left">
+                                        <div class="gbuy-item">
+                                            <div class="gbuy-item-img">
+                                                <a href=""><img src="image/2f738bd4b31c87010b0be323227f9e2f0608ffb2.jpg?__inline"></a>
+                                            </div>
+                                            <div class="gbuy-item-word">
+                                                <div class="gbuy-message">
+                                                    <a href="">乐事超级手机乐1</a>
+                                                    <p>最高返17元</p>
+                                                </div>
+                                                <div class="gbuy-pride">
+                                                    <span>¥1499</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="gbuy-item">
+                                            <div class="gbuy-item-img">
+                                                <a href=""><img src="image/2f738bd4b31c87010b0be323227f9e2f0608ffb2.jpg?__inline"></a>
+                                            </div>
+                                            <div class="gbuy-item-word">
+                                                <div class="gbuy-message">
+                                                    <a href="">乐事超级手机乐1</a>
+                                                    <p>最高返17元</p>
+                                                </div>
+                                                <div class="gbuy-pride">
+                                                    <span>¥1499</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="gbuy-item">
+                                            <div class="gbuy-item-img">
+                                                <a href=""><img src="image/2f738bd4b31c87010b0be323227f9e2f0608ffb2.jpg?__inline"></a>
+                                            </div>
+                                            <div class="gbuy-item-word">
+                                                <div class="gbuy-message">
+                                                    <a href="">乐事超级手机乐1</a>
+                                                    <p>最高返17元</p>
+                                                </div>
+                                                <div class="gbuy-pride">
+                                                    <span>¥1499</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="gbuy-item">
+                                            <div class="gbuy-item-img">
+                                                <a href=""><img src="image/2f738bd4b31c87010b0be323227f9e2f0608ffb2.jpg?__inline"></a>
+                                            </div>
+                                            <div class="gbuy-item-word">
+                                                <div class="gbuy-message">
+                                                    <a href="">乐事超级手机乐1</a>
+                                                    <p>最高返17元</p>
+                                                </div>
+                                                <div class="gbuy-pride">
+                                                    <span>¥1499</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="gbuy-item">
+                                            <div class="gbuy-item-img">
+                                                <a href=""><img src="image/2f738bd4b31c87010b0be323227f9e2f0608ffb2.jpg?__inline"></a>
+                                            </div>
+                                            <div class="gbuy-item-word">
+                                                <div class="gbuy-message">
+                                                    <a href="">乐事超级手机乐1</a>
+                                                    <p>最高返17元</p>
+                                                </div>
+                                                <div class="gbuy-pride">
+                                                    <span>¥1499</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="gbuy-item">
+                                            <div class="gbuy-item-img">
+                                                <a href=""><img src="image/2f738bd4b31c87010b0be323227f9e2f0608ffb2.jpg?__inline"></a>
+                                            </div>
+                                            <div class="gbuy-item-word">
+                                                <div class="gbuy-message">
+                                                    <a href="">乐事超级手机乐1</a>
+                                                    <p>最高返17元</p>
+                                                </div>
+                                                <div class="gbuy-pride">
+                                                    <span>¥1499</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="four-right">
+                                        <div class="gbuy-activity">
+                                            <a href="" class="activity-title"><i></i>百度VIP嗨享乐迷节</a>
+                                            <a href="" class="activity-offer">电视手机免费送，全场返利</a>
+                                        </div>
+                                        <div class="gbuy-section">
+                                            <p>返利商城</p>
+                                            <a href="">百度糯米</a>
+                                            <a href="">京东商城</a>
+                                            <a href="">当当网</a>
+                                            <a href="">1号店</a>
+                                            <a href="">苏宁易购</a>
+                                            <a href="" class="gbuy-more">更多</a>
+                                        </div>
+                                        <div class="gbuy-section">
+                                            <p>免费优惠券</p>
+                                            <a href="">跨境淘</a>
+                                            <a href="">爱慕内衣</a>
+                                            <a href="">河狸家</a>
+                                            <a href="">功夫熊</a>
+                                            <a href="">e袋洗</a>
+                                            <a href="" class="gbuy-more">更多</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-five content-frame">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer"></div>
+    </div>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/baidu.js"></script>
+</body>
+
+</html>
